@@ -8,7 +8,7 @@ function writePassword() {
   var password = '';
 
   var passwordLength = window.prompt("Enter password length. (8-128)")
-  if (passwordLength < 8 || passwordLength > 128) {
+  if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
     window.alert("Invalid length entry");
     return;
   }
@@ -43,6 +43,31 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+
+  
+  // var hasletterLC = false;
+  // var hasletterUC = false;
+  // var hasnumbersChar = false;
+  // var hasspecChar = false;
+
+  // randomChar = characters.charAt(Math.floor(Math.random() * characters.length));
+  // password += randomChar;
+
+  // if (!hasletterLC && letterLC.includes(randomChar)) {
+  //   hasletterLC = true;
+  // }
+  // if (!hasletterUC && letterUC.includes(randomChar)) {
+  //   hasletterUC = true;
+  // }
+  // if (!hasnumbersChar && numbersChar.includes(randomChar)) {
+  //   hasnumbersChar = true;
+  // }
+  // if (!hasspecChar && specChar.includes(randomChar)) {
+  //   hasspecChar = true;
+  // }
+
+  // if ((lowercase && !hasLetterLC) || (uppdercase && !hasLetterUC) || (numbers && !hasnumbersChar) || (symbol && !hasspecChar)) {
+  //   writePassword()
 
 }
 
